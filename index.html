@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Ưebsite Icon" type="png"
-    href=".//icon.png">
+    <link rel="website icon" type="png" href="./icon.png">
     <title>Nông Triệu Thái</title>
     <style>
         * {
@@ -205,6 +204,71 @@
             box-shadow: 0 0 20px rgba(255, 202, 40, 0.7);
         }
 
+        /* TikTok */
+        #tiktok {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        #tiktok p {
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            margin-bottom: 2rem;
+            transform: translateZ(10px);
+        }
+
+        .tiktok-container {
+            display: flex;
+            justify-content: center;
+            gap: clamp(1rem, 2vw, 2rem);
+            flex-wrap: wrap;
+        }
+
+        .tiktok-item {
+            flex: 1;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        #tiktok iframe {
+            width: 100%;
+            height: 600px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(40, 167, 69, 0.5);
+            transform: translateZ(20px);
+            transition: transform 0.3s ease;
+        }
+
+        #tiktok iframe:hover {
+            transform: translateZ(40px) scale(1.02); /* Nổi lên nhẹ khi hover */
+        }
+
+        #tiktok .tiktok-btn {
+            background: #28a745; /* Xanh lá */
+            color: white;
+            padding: clamp(0.8rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+            border: none;
+            border-radius: 25px;
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(40, 167, 69, 0.5);
+            transform: translateZ(0);
+            display: inline-block;
+            margin-top: 1rem;
+            text-decoration: none;
+        }
+
+        #tiktok .tiktok-btn:hover {
+            background: #ff5722; /* Cam sáng */
+            box-shadow: 0 10px 20px rgba(255, 87, 34, 0.7);
+            transform: translateZ(30px) rotateX(10deg); /* Nổi lên và nghiêng 3D */
+        }
+
+        @media (max-width: 768px) {
+            #tiktok iframe { height: 400px; }
+            .tiktok-container { flex-direction: column; align-items: center; }
+        }
+
         /* Contact */
         .contact-buttons {
             display: flex;
@@ -262,7 +326,7 @@
                 align-items: center;
             }
 
-            .skill:hover, #about img:hover, .contact-buttons button:hover {
+            .skill:hover, #about img:hover, .contact-buttons button:hover, #tiktok iframe:hover, #tiktok .tiktok-btn:hover {
                 transform: translateZ(10px); /* Giảm độ 3D trên màn nhỏ */
             }
         }
@@ -296,6 +360,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#tiktok">TikTok</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -329,6 +394,22 @@
             <div class="skill">Thiết kế Website</div>
             <div class="skill">Bán mạng VPN</div>
             <div class="skill">Quản lý dịch vụ trực tuyến</div>
+        </div>
+    </section>
+
+    <!-- TikTok Section -->
+    <section id="tiktok">
+        <h2>Theo dõi tôi trên TikTok</h2>
+        <p>Xem các video sáng tạo, siêu phẩm triệu view và nhiều nội dung thú vị khác!</p>
+        <div class="tiktok-container">
+            <div class="tiktok-item">
+                <iframe src="https://www.tiktok.com/embed/@daizonai" frameborder="0" allowfullscreen></iframe>
+                <a href="https://www.tiktok.com/@daizonai" target="_blank" class="tiktok-btn">Xem @daizonai</a>
+            </div>
+            <div class="tiktok-item">
+                <iframe src="https://www.tiktok.com/embed/@triu.theis" frameborder="0" allowfullscreen></iframe>
+                <a href="https://www.tiktok.com/@triu.theis" target="_blank" class="tiktok-btn">Xem @triu.theis</a>
+            </div>
         </div>
     </section>
 
